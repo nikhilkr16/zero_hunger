@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="IMG/logo.png" type="image/x-icon">
+
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
+	integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+
+<!-- font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital@1&family=Playpen+Sans&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital@1&family=Playfair+Display:ital@1&family=Playpen+Sans&family=Salsa&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital@1&family=Playpen+Sans&family=Salsa&display=swap" rel="stylesheet">
+<!-- font -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZERO HUNGER</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            overflow-x: hidden;
+
+        }
+        .main{
+            background-size: cover;
+            width: 100.65vw;
+            height: 100vh;
+            background-color: aqua;
+            position: relative;
+            padding: 0 5%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 555;
+
+
+
+        }
+        .navbar {
+            padding: 1rem ;
+           background-color: transparent;
+           overflow: hidden;    
+           width: 100%;
+           position: absolute;
+           top:0;
+           left:0;
+           display: flex;
+           align-items: center;
+        justify-content: space-between;
+        font-size: 1.38rem;
+        z-index:5;  
+        }
+        .navbar .logo{
+            width: 18rem;
+            filter: saturate(4);
+            transition: 0.6s linear;
+
+        }
+        .navbar .logo:hover{
+            transform: scale(1.1);
+            filter: saturate(8);
+
+        }
+
+        .navbar a {
+           float: left;
+           display: block;
+           color: #fff;
+           text-align: center;
+           padding: 14px 16px;
+           text-decoration: none;
+           font-weight: 700;
+           transition: 0.6s linear;
+
+        }
+        .navbar a:hover {
+           text-shadow:1px 1px 2px black , 0 0 25px blue,0 0 5px darkblue;
+           transform: scale(1.2);
+        }
+
+        .content{
+           
+            text-align: center  ;
+        }
+        .content h1{
+            display: grid;
+            place-items: center;
+            font-size:140px;
+            color:#fff;
+            font-weight:600;
+            transition: 0.6s linear;
+/* 
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            text-shadow: 10px 5px 3px lightblue; */
+            
+        }
+        .content h1:hover{
+            -webkit-text-stroke: 2px #fff ;
+            color:transparent;
+background: linear-gradient(
+  45deg,
+  hsl(240deg 100% 20%) 0%,
+  hsl(289deg 100% 21%) 3%,
+  hsl(315deg 100% 27%) 9%,
+  hsl(329deg 100% 36%) 16%,
+  hsl(337deg 100% 43%) 26%,
+  hsl(357deg 91% 59%) 39%,
+  hsl(17deg 100% 59%) 54%,
+  hsl(34deg 100% 53%) 70%,
+  hsl(45deg 100% 50%) 87%,
+  hsl(55deg 100% 50%) 100%
+);
+            border-radius:60%;
+            text-shadow:1px 1px 2px red, 0  0 25px blue , 0 0 5px darkblue;
+
+        }
+
+
+        .display-4{
+            font-weight:400;
+
+        }
+
+        .back-video{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            z-index:-1 ;
+            filter: opacity(50%);       
+                }
+
+                .back-video2{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            z-index:-1 ;
+            filter: opacity(50%);       
+                }
+            .back-video2 video{
+                min-width: 100%;
+                min-height: 100%;
+            }
+
+
+
+        @media (min-aspect-ratio:16/9){
+            .back-video{
+                width: 100%;
+                height: auto;
+            }
+
+        }
+        @media (max-aspect-ratio:16/9){
+            .back-video{
+                width:auto;
+                height: 100%;
+            }
+        }
+
+        @media (width<=768px){
+            .navbar a.icon {
+  background: black;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+
+        .navbar{
+        
+                 overflow: hidden;
+                  position: relative;
+        }
+    }
+}
+
+.problem_img{
+    border-radius: 60%;
+    box-shadow: 0px 2px 6px 7px rgb(248, 246, 246);
+
+}
+.solutions{
+    background:linear-gradient(45deg,rgba(0, 0, 0, .6),rgba(0, 0, 0, .5) ), url("IMG/45.jpg");
+    background-size: 100% 100%;
+
+}
+/* .contents{
+    filter: opacity(50%);       
+    background-color: #fff;
+    z-index: 2;    
+} */
+
+.problem  .head{
+            display: grid;
+            place-items: center;
+            font-size:50px;
+            color:#fff;
+            font-weight:600;
+            transition: 0.6s linear;
+
+            
+        }
+.problem  h3{
+    display: grid;
+            place-items: center;
+            font-size:20px;
+            color:#fff;
+            font-weight:600; 
+            font-family: 'Salsa', cursive;
+  
+}
+.problem .head:hover{
+            -webkit-text-stroke: 2px #fff ;
+            color:transparent;
+        }
+
+.button{
+    display: grid;
+ place-items: center;
+    width: 80%;
+    transition-duration: 0.4s;
+    padding: 2rem;
+    font-size: 2rem;
+    border-radius: 20%;
+    color: #fff;
+
+}
+.button:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  -webkit-text-stroke: 2px #fff ;
+            color:transparent;
+}
+
+.made  {
+    color:#fff !important;
+text-decoration: none;
+}
+
+
+@font-face{
+	font-family: meri_marzi;
+	src: url("IMG/googlesans.ttf");
+}
+.fonthead{
+    /* font-family: 'Playpen Sans', cursive; */
+    font-family: meri_marzi;
+}
+
+p{
+    font-family: 'Salsa', cursive;
+
+}
+/* SCROLLBAR STYLE */
+
+/* width */
+#nik_scy::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+#nik_scy::-webkit-scrollbar-track {
+  background-image: linear-gradient(  -120deg,#4285F4,#34A853,#FBBC05,#EA4335 );
+}
+ 
+ #nik_scy::-webkit-scrollbar-track:hover{
+  background: #f1f1f1; 
+ }
+/* Handle */
+#nik_scy::-webkit-scrollbar-thumb {
+  background:/*  #888 */   url("IMG/88.jpg"); 
+  border-radius: 20px;  
+}
+
+/* Handle on hover */
+#nik_scy::-webkit-scrollbar-thumb:hover {
+  background: /* #556 */#212529; 
+}
+
+</style>
+</head>
+<body id="nik_scy">
+
+<section id="main">
+    <div class="main">
+
+
+            <video autoplay loop muted plays-inline class="back-video">
+                <source src="IMG/backvideo.mp4" types="video/mp4" style="background: linear-gradient(45deg,rgba(0, 0, 0, .4),rgba(0, 0, 0, .5) )" >
+            </video>
+    <div class="navbar">
+        <img src="IMG/logo2.png" class="logo">
+        <a href="#main">Main</a>
+        <a href="#problem">Problem</a>
+        <a href="#solution">Solution</a>
+        <a href="#contact">Contact</a>&nbsp;&nbsp;
+        <!-- <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+        </a> -->
+    </div>
+
+
+    <div class="content modal1"><h1>SOLVING WORLD HUNGER</h1></div>
+
+
+
+
+</div>
+
+
+
+</section>
+
+<section class="problem my-5 py-5 " id="problem">
+    
+    
+
+    <div class="text-center text-capitalize ">
+		<h1 class="display-4 fonthead uppercase">REASON BEHIND FOOD Shortage</h1>
+		<hr class="w-50 mx-auto" />
+	</div>
+    <video autoplay loop muted plays-inline class="back-video">
+        <source src="IMG/backvideo2.mp4" types="video/mp4" style="background: linear-gradient(45deg,rgba(0, 0, 0, .4),rgba(0, 0, 0, .5) )" >
+    </video>
+
+    <div class="container-fluid my-5 py-5">
+        <div class="row bg-primary" style="border-radius: 4%;">
+            <div class="col-xxl-4 col-12 col-md-4 mx-auto pt-4 pb-4">
+
+
+                <img src="IMG/1.jpg"  class="problem_img">
+
+            </div>
+            <div class="col-xxl-8 col-12  col-md-8 mx-auto my-5 py-5">
+                    <h1 class="head"> CLIMATE CHANGE</h1>
+               <h3> Climate change disrupts weather patterns, leading to extreme events like droughts and floods,
+                 impacting crop yields and causing food shortages, ultimately contributing to world hunger.
+                    </h3>
+            </div>
+        </div>
+<hr>
+        <div class="row bg-danger" style="border-radius: 4%;">
+            <div class="col-xxl-8 col-12 col-md-8 mx-auto my-5 py-5 px-5">
+               <h1 class="head">WAR</h1>
+                <h3>Wars cause food shortage in a country by disrupting agriculture and trade routes</h3>
+            </div>
+            <div class="col-xxl-4 col-12  col-md-4 mx-auto pt-4 pb-4">
+
+                <img src="IMG/4.png" class="problem_img ">
+
+
+            </div>
+        </div>
+<hr>
+        <div class="row bg-warning" style="border-radius: 4%;">
+            <div class="col-xxl-4 col-12 col-md-4 mx-auto pt-4 pb-4">
+
+                <img src="IMG/2.jpg" class="problem_img">
+
+
+            </div>
+            <div class="col-xxl-8 col-12  col-md-8 mx-auto my-5 py-5">
+                <h1 class="head">POVERTY</h1>
+                <h3>Poverty limits people's access to food, contributing to widespread hunger worldwide.</h3>
+
+            </div>
+        </div>
+
+    
+</div>
+
+</section>
+
+
+
+<section class="problem solutions my-5 py-5" id="solution" >
+    <!-- <video autoplay loop muted plays-inline class="back-video2">
+        <source src="IMG/backvideo.mp4" types="video/mp4"  >
+    </video> -->
+
+    <div class="text-center text-capitalize " >
+		<h1 class="display-4 text-white  fonthead">SOLUTION TO PREVENT WORLD HUNGER</h1>
+		<hr class="w-50 mx-auto bg-white" />
+	</div>
+   
+   
+
+    <div class="container-fluid contents mx-4 my-5 py-5">
+        
+        <div class="row ">
+            <div class="col-xxl-4 col-12 col-md-4 mx-auto ">
+                <img src="IMG/6.jpg" class="problem_img">
+            </div>
+
+            <div class="col-xxl-8 col-12  col-md-8 mx-auto my-5 py-5">
+ <div class="button b1 bg-danger text-uppercase" type="button" data-bs-toggle="modal" data-bs-target="#SA"> Sustainable Agriculture</div>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-xxl-4 col-12 col-md-4 mx-auto">
+                <img src="IMG/5.jpg" class="problem_img">
+            </div>
+
+
+            <div class="col-xxl-8 col-12  col-md-8 mx-auto  my-5 py-5">
+                <a href="https://www.ndrf.gov.in/" target="_blank" style="text-decoration: none;">
+                    <div class="button b2 bg-warning" type="button">NDRF ( National Disaster Response Force)</div>
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-xxl-4 col-12 col-md-4 mx-auto ">
+                <img src="IMG/7.jpg" class="problem_img">
+
+            </div>
+
+            <div class="col-xxl-8 col-12  col-md-8 mx-auto  my-5 py-5">
+                <div class="button b3 bg-primary" type="button" data-bs-toggle="modal" data-bs-target="#GS">GOVERNMENT SCHEMES</div>
+
+            </div>
+
+            <div class="modal fade" id="GS" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">GOVERNMENT SCHEMES
+                      
+                    
+                      </h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body bg-light">
+            
+            <div class="row  gy-3 gx-3">
+            <center>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-6 bg-danger">
+
+            <div class="card border-dark mb-3 " style="max-width: 20rem;">
+                <a href="https://www.myscheme.gov.in/schemes/pm-gkay"target="_blank" style="text-decoration: none;">
+
+            <div class="card-body text-dark" data-bs-toggle="modal" >
+            <h4 class="card-title  ">
+                Pradhan Mantri Garib Kalyan Anna Yojana (PMGKAY)</h4>
+            <p class="card-text">Provides 5 kg of free food grains per month to over 80 crore beneficiaries.</p>
+            </div>
+            </a>
+            </div>
+            
+            </div>
+
+
+            <div class="col-xl-6 col-lg-6 col-md-6 col-6 bg-primary">
+
+                <div class="card border-dark mb-3 " style="max-width: 20rem;">
+                    <a href="https://nfsa.gov.in/portal/nfsa-act" target="_blank" style="text-decoration: none;">
+    
+                <div class="card-body text-dark" data-bs-toggle="modal" >
+                <h4 class="card-title  ">
+                    National Food Security Act (NFSA)</h4>
+                <p class="card-text">Covers up to 75% of the rural population and 50% of the urban population.
+                    Provides subsidized food grains to eligible households through ration shops </p>
+                </div>
+                </a>
+                </div>
+                
+                </div>
+            
+        
+            
+            <div class="col-xl-6 col-lg-6 col-md-6 col-6 bg-warning text-white">
+
+                <div class="card border-dark mb-3 " style="max-width: 20rem;">
+                    <a href="https://www.indiafilings.com/learn/antyodaya-anna-yojana-aay/" target="_blank" style="text-decoration: none;">
+    
+                <div class="card-body text-dark" data-bs-toggle="modal" >
+                <h4 class="card-title  ">
+                    Antyodaya Anna Yojana (AAY)</h4>
+                <p class="card-text">Targets the poorest of the poor, providing 35 kg of food grains per month at highly subsidized rates</p>
+                </div>
+                </a>
+                </div>
+                
+                
+
+            </center>
+            </div>	
+            
+            </div></div></div></div>
+        </div>
+
+    
+
+
+
+        <div class="modal fade" id="SA" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">
+                    Sustainable Agriculture
+                
+                  </h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body bg-light">
+        
+        <div class="row  gy-3 gx-3">
+        <center>
+        <div class="col-xl-6 col-lg-6 col-md-6 col-6 bg-danger">
+
+        <div class="card border-dark mb-3 " style="max-width: 20rem;">
+            <a href="https://climatesmartfarming.org/tools/"target="_blank" style="text-decoration: none;">
+
+
+        <div class="card-body text-dark" data-bs-toggle="modal" >
+        <h4 class="card-title  ">
+            CLIMATE-SMART AGRICULTURE</h4>
+        <p class="card-text">an integrated approach to managing landscapes—cropland, livestock, forests and fisheries--that address the interlinked challenges of food security and climate change.</p>
+        </div>
+        </a>
+        </div>
+        
+        </div>
+
+
+        <div class="col-xl-6 col-lg-6 col-md-6 col-6 bg-primary">
+
+            <div class="card border-dark mb-3 " style="max-width: 20rem;">
+                <a href="https://www.agrivi.com/blog/factors-that-affect-agricultural-productivity/" target="_blank" style="text-decoration: none;">
+
+            <div class="card-body text-dark" data-bs-toggle="modal" >
+            <h4 class="card-title  ">
+                Increase agricultural productivity</h4>
+            <p class="card-text">a complex challenge with many potential solutions, depending on the specific context and available resources.</p>
+            </div>
+            </a>
+            </div>
+            
+            </div>
+        
+    
+        
+        <div class="col-xl-6 col-lg-6 col-md-6 col-6 bg-warning text-white">
+
+            <div class="card border-dark mb-3 " style="max-width: 20rem;">
+                <a href="https://www.linkedin.com/company/seed-programs-inc/" target="_blank" style="text-decoration: none;">
+
+            <div class="card-body text-dark" data-bs-toggle="modal" >
+            <h4 class="card-title  ">
+                Seed Programs International</h4>
+            <p class="card-text"> non-profit organization that works to improve food security and household income by providing access to quality seeds, training, and agricultural resources</p>
+            </div>
+            </a>
+            </div>
+            
+            
+
+        </center>
+        </div>	
+        
+        </div></div></div></div>
+    </div>
+
+
+
+
+    </div>
+
+
+</section>
+
+
+
+<section class="bg-dark text-white" id="contact">
+    <!-- Footer -->
+    <footer class="bg-body-tertiary text-center text-md-start">
+      <!-- Grid container -->
+      <div class="container p-4">
+        <!--Grid row-->
+        <div class="row">
+          <!--Grid column-->
+          <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+            <h5 class="text-uppercase">ZERO HUNGER</h5>
+  
+            <p>
+                Goal 2 is about creating a world free of hunger by 2030.The global issue of hunger and food
+                 insecurity has shown an alarming increase since 2015, a trend exacerbated by a combination of 
+                 factors including the pandemic, conflict, climate change, and deepening inequalities.
+                 
+                 <div class="text-muted">
+                <script async src="https://cse.google.com/cse.js?cx=c49597c707d68438a">
+                </script><div class="gcse-search" ></div>
+                </div>
+            </p>
+          </div>
+          <!--Grid column-->
+  
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Reference</h5>
+  
+            <ul class="list-unstyled mb-0  ">
+              <li>
+                <a href="https://www.un.org/sustainabledevelopment/hunger/" class="text-body text-muted">UN GOAL</a>
+              </li>
+              <li>
+                <a href="https://en.wikipedia.org/wiki/Sustainable_Development_Goal_2" class="text-body text-muted">WIKI</a>
+              </li>
+              <li>
+                <a href="https://education.nationalgeographic.org/resource/sustainable-development-goal-zero-hunger/" class="text-body text-muted">NGS</a>
+              </li>
+              <li>
+                <a href="https://www.google.com/search?q=zero+hunger+solutions&sca_esv=597055585&sxsrf=ACQVn0-0c360hyh0rTPvx8cmzCU7T9YFzw%3A1704846410880&ei
+                =SuSdZaWqNYCR4-EP0JykOA&oq=zero+hunger+&gs_lp=Egxnd3Mtd2l6LXNlcnAiDHplcm8gaHVuZ2VyICoCCAEyChAAGIAEGIoFGEMyChAAGIAEGIoFGEMyChAAGIAEGIoFGEMyChA
+                AGIAEGIoFGEMyChAAGIAEGIoFGEMyChAAGIAEGIoFGEMyChAAGIAEGIoFGEMyChAAGIAEGIoFGEMyChAAGIAEGIoFGEMyBRAAGIAESNQcUKQMWKQMcAB4ApABAJgB9gGgAfYBqgEDMi0x
+                uAEByAEA-AEBwgIEEAAYR-IDBBgAIEGIBgGQBgg&sclient=gws-wiz-serp" class="text-body text-muted">EXTRA</a>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
+  
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase mb-4">MADE BY:-</h5>
+  
+            <ul class="list-unstyled ">
+              <li>
+                <a href="https://www.linkedin.com/in/anuska-dutta-460ab6284/" class="text-body made">ANUSKA DUTTA</a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/nikhilkumar16/" class="text-body made">NIKHIL KUMAR</a>
+              </li>
+              
+            </ul>
+          </div>
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
+      </div>
+      <!-- Grid container -->
+  
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+        © 2024 Copyright:
+        <a class="text-body" href="#">zerohunger</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+  </section>
+
+
+    <script>
+
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "navbar") {
+                x.className += " responsive";
+            } else {
+                x.className = "navbar";
+            }
+        }
+
+
+        const myModal = document.getElementById('myModal')
+const myInput = document.getElementById('myInput')
+
+myModal.addEventListener('shown.bs.modal', () => {
+  myInput.focus()
+})
+    </script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+ <!-- Option 2: Separate Popper and Bootstrap JS -->
+ <!--
+ <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+ -->
+<script>
+ var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+return new bootstrap.Tooltip(tooltipTriggerEl)
+})
+</script>
+</body>
+</html>
